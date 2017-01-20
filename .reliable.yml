@@ -1,12 +1,6 @@
 
 language: node_js
 
-
-env:
-  mirror:
-    nvm: https://npm.taobao.org/dist
-    npm: http://registry.npm.com
-
 node_js: 
   - 6
 

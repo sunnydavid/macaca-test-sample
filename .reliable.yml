@@ -17,7 +17,7 @@ before_install:
 
 before_script: nvm ls
 
-script: make test
+script: make test-android
 
 after_script: npm -v
 

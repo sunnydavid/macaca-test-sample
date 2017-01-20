@@ -1,10 +1,6 @@
-sudo: required
 
 language: node_js
 
-addons:
-  brew:
-    - autojump
 
 env:
   mirror:
@@ -21,7 +17,7 @@ before_install:
 
 before_script: nvm ls
 
-script: curl -X POST --data-urlencode 'payload={"channel": "#macaca", "username": "Reliable Slave Bot", "text": "Macaca test fail!", "attachments": [{"color": "danger", "text": "test fail!"}]}' https://hooks.slack.com/services/aaaaa/bbbb/ccccc
+script: make test
 
 after_script: npm -v
 

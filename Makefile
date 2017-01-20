@@ -3,7 +3,7 @@ npm_bin= $$(npm bin)
 
 all: test
 install:
-	@npm install
+	@npm install --registry=https://registry.npm.taobao.org
 test:
 	@echo ""
 	@echo "make test-ios             Test sample for iOS"

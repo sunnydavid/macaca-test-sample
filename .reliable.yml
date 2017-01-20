@@ -1,1 +1,30 @@
-webdriver_server: true
+sudo: required
+
+language: node_js
+
+addons:
+  brew:
+    - autojump
+
+env:
+  mirror:
+    nvm: https://npm.taobao.org/dist
+    npm: http://registry.npm.com
+
+node_js: 
+  - 6
+
+services: docker
+
+before_install:
+  - nvm ls
+
+before_script: nvm ls
+
+script: curl -X POST --data-urlencode 'payload={"channel": "#macaca", "username": "Reliable Slave Bot", "text": "Macaca test fail!", "attachments": [{"color": "danger", "text": "test fail!"}]}' https://hooks.slack.com/services/aaaaa/bbbb/ccccc
+
+after_script: npm -v
+
+after_failure: npm -v
+
+after_success:
